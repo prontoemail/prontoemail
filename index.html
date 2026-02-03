@@ -3,677 +3,616 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Access your Pronto Email login securely. Learn to sign in, reset passwords, fix login issues, and manage your Pronto email from any device with step-by-step help.">
-    <meta name="keywords" content="prontoemail login, pronto login account, pronto login login my account, login pronto email, login pronto email account, how to login pronto email, how to login pronto login account, how to access pronto email login account">
     <title>How to Login Pronto Email Account?</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Access your Pronto email account with our login guide. Learn webmail access, IMAP/POP settings, and troubleshooting steps for Pronto email login issues.">
+    <meta name="keywords" content="pronto email login, pronto email sign in, access pronto email, pronto webmail login, pronto email settings, pronto email account access">
+    <meta name="google-site-verification" content="6xnUtTMYzh7uMh7kn4zFR_KWdZZQOq35pvdqJpttcUE" />
+    <meta name="msvalidate.01" content="ABDEC344347913592B935A84231B767E" />
+    <meta name="author" content="Pronto Email Support">
+    <link rel="icon" href="https://www.google.com/s2/favicons?domain=pronto.net" sizes="16x16">
     <style>
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #10b981;
-            --dark: #1f2937;
-            --light: #f8fafc;
-            --gray: #6b7280;
-            --gray-light: #e5e7eb;
-            --danger: #ef4444;
-            --warning: #f59e0b;
-            --radius: 12px;
-            --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            color: var(--dark);
-            line-height: 1.7;
-            min-height: 100vh;
-            background-attachment: fixed;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
-
         /* Header Styles */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
+            background: linear-gradient(135deg, #0088cc 0%, #00aaff 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
-        .header-content {
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 0;
         }
-
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 22px;
-            font-weight: 800;
-            box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
-        }
-
-        .logo-text {
-            font-size: 26px;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 16px;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            border-radius: var(--radius);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .login-btn {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--gray-light);
-        }
-
-        .login-btn:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        .login-now-btn {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
-        }
-
-        .login-now-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(99, 102, 241, 0.4);
-            background: linear-gradient(135deg, var(--primary-dark), #4338ca);
-        }
-
-        /* Main Content */
-        main {
-            padding: 60px 0;
-        }
-
-        .article-header {
-            text-align: center;
-            margin-bottom: 60px;
-            padding: 50px 40px;
-            background: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .article-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-        }
-
-        h1 {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--primary), var(--dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.2;
-        }
-
-        .intro {
-            font-size: 18px;
-            color: var(--gray);
-            max-width: 800px;
-            margin: 0 auto 25px;
-            font-weight: 500;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .stat-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-        }
-
-        /* Content Cards */
-        .content-card {
-            background: white;
-            border-radius: var(--radius);
-            padding: 45px;
-            box-shadow: var(--shadow);
-            margin-bottom: 40px;
-            border: 1px solid var(--gray-light);
-            transition: var(--transition);
-        }
-
-        .content-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: var(--dark);
-            margin-bottom: 25px;
-            font-size: 32px;
+            font-size: 1.8rem;
             font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        h2 i {
-            color: var(--primary);
-        }
-
-        h3 {
-            color: var(--dark);
-            margin: 30px 0 20px;
-            font-size: 22px;
-            font-weight: 600;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
-        p {
-            margin-bottom: 20px;
-            color: var(--gray);
-            font-size: 16.5px;
-        }
-
-        /* Steps */
-        .steps-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 35px 0;
-        }
-
-        .step-card {
-            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-            border-radius: var(--radius);
-            padding: 30px;
-            border-left: 5px solid var(--primary);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .step-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .step-number {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 70px;
-            font-weight: 900;
-            color: rgba(99, 102, 241, 0.1);
-        }
-
-        .step-title {
-            color: var(--primary-dark);
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        /* Lists */
-        ul, ol {
-            margin-left: 25px;
-            margin-bottom: 25px;
-        }
-
-        li {
-            margin-bottom: 12px;
-            color: var(--gray);
-            padding-left: 10px;
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 6px;
+            display: inline-block;
             position: relative;
         }
-
-        li::before {
-            content: '•';
-            color: var(--primary);
+        .logo-icon::after {
+            content: '✉';
+            color: #0088cc;
             font-weight: bold;
             position: absolute;
-            left: -15px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
         }
-
-        /* Info Boxes */
-        .info-box {
-            padding: 25px;
-            border-radius: var(--radius);
-            margin: 30px 0;
-            border-left: 5px solid;
-            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-        }
-
-        .security-box {
-            border-left-color: var(--secondary);
-            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-        }
-
-        .warning-box {
-            border-left-color: var(--warning);
-            background: linear-gradient(135deg, #fffbeb, #fef3c7);
-        }
-
-        .info-box-header {
+        .nav-buttons {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
+            gap: 15px;
         }
-
-        .info-box-header i {
-            font-size: 22px;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            padding: 60px;
-            border-radius: var(--radius);
-            margin-top: 60px;
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 30px 30px;
-            opacity: 0.3;
-        }
-
-        .cta-title {
-            font-size: 36px;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta-text {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta-btn {
-            background: white;
-            color: var(--primary);
-            padding: 18px 45px;
-            font-size: 18px;
-            font-weight: 700;
-            border-radius: var(--radius);
+        .btn {
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            justify-content: center;
         }
-
-        .cta-btn:hover {
-            background: #f8fafc;
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        .btn-login {
+            background-color: white;
+            color: #0088cc;
+            border: 2px solid white;
         }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: #d1d5db;
-            padding: 50px 0 30px;
-            margin-top: 80px;
+        .btn-login:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
         }
-
-        .footer-content {
+        .btn-support {
+            background-color: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
+        .btn-support:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+        .article-header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        h1 {
+            color: #0088cc;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .lead {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        .content-section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid #00aaff;
+        }
+        h2 {
+            color: #0088cc;
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+        }
+        h3 {
+            color: #00aaff;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.8rem;
+        }
+        .step-list {
+            background-color: #f0f9ff;
+            padding: 1.8rem 2rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        .step-list li {
+            margin-bottom: 1.5rem;
+            padding-left: 10px;
+        }
+        .highlight {
+            background-color: #f0f9ff;
+            padding: 1.5rem;
+            border-left: 4px solid #00aaff;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .method-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 20px;
+            margin: 2rem 0;
         }
-
-        .footer-section h4 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 18px;
-            font-weight: 600;
+        .method-card {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
         }
-
-        .footer-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        .method-card h4 {
+            color: #0088cc;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
         }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: #9ca3af;
-            text-decoration: none;
-            transition: var(--transition);
+        .email-visual {
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .footer-links a:hover {
-            color: white;
-            transform: translateX(5px);
-        }
-
-        .copyright {
+            justify-content: center;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(90deg, #f0f9ff 0%, #f8f9fa 100%);
+            border-radius: 12px;
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #374151;
-            color: #9ca3af;
-            font-size: 14px;
         }
-
+        .email-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0088cc 0%, #00aaff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        .settings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .settings-table th {
+            background-color: #0088cc;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        .settings-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .settings-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .settings-table tr:hover {
+            background-color: #f0f9ff;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #f39c12;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .login-example {
+            background-color: #f8fafc;
+            border: 1px dashed #00aaff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: monospace;
+        }
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ddd;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
         /* Responsive */
         @media (max-width: 768px) {
-            .header-content {
+            .header-container {
                 flex-direction: column;
                 gap: 20px;
-                text-align: center;
             }
-            
-            .btn-group {
-                width: 100%;
-                flex-direction: column;
-            }
-            
-            .btn {
+            .nav-buttons {
                 width: 100%;
                 justify-content: center;
             }
-            
             h1 {
-                font-size: 32px;
+                font-size: 2.2rem;
             }
-            
-            .content-card {
-                padding: 25px;
+            .content-section {
+                padding: 1.8rem;
             }
-            
-            .cta-section {
-                padding: 40px 25px;
+            .btn {
+                padding: 10px 18px;
+                font-size: 0.9rem;
             }
-            
-            .stats {
-                gap: 20px;
+            .method-grid {
+                grid-template-columns: 1fr;
             }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-            
-            h1 {
-                font-size: 28px;
-            }
-            
-            h2 {
-                font-size: 24px;
-            }
-            
-            .article-header {
-                padding: 30px 20px;
+            .settings-table {
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-paper-plane"></i>
-                    </div>
-                    <div class="logo-text">ProntoEmail</div>
-                </a>
-                <div class="btn-group">
-                    <a href="https://app-prontoemail.com/" target="_blank" class="btn login-btn">
-                        <i class="fas fa-sign-in-alt"></i>
-                        Login
-                    </a>
-                    <a href="https://app-prontoemail.com/" target="_blank" class="btn login-now-btn">
-                        <i class="fas fa-rocket"></i>
-                        LOGIN NOW
-                    </a>
-                </div>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                Pronto Email Login Guide
+            </div>
+            <div class="nav-buttons">
+                <a href="https://webmail.pronto.net" target="_blank" class="btn btn-login">Login Now</a>
+                <a href="https://pronto.net/support" target="_blank" class="btn btn-support">Get Support</a>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <article>
-            <div class="article-header">
-                <h1>How to Login Pronto Email Account</h1>
-                <p class="intro">Access your Pronto Email login account securely. Learn how to sign in, reset your password, fix login issues, and manage your Pronto email settings quickly from any device.</p>
-                <p>Get step-by-step help, security tips, and fast access to Pronto Mail for seamless email management.</p>
-                
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div>
-                            <strong>Secure Access</strong>
-                            <div>Bank-level encryption</div>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div>
-                            <strong>Any Device</strong>
-                            <div>Desktop, tablet & mobile</div>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <strong>Quick Setup</strong>
-                            <div>Under 2 minutes</div>
-                        </div>
-                    </div>
+        <div class="article-header">
+            <h1>How to Login Pronto Email Account?</h1>
+            <p>Accessing your Pronto email account through webmail or email clients requires proper configuration and credentials. This guide demonstrates multiple login methods, configuration settings, and troubleshooting approaches for Pronto email services.</p>
+        </div>
+
+        <section class="content-section">
+            <h2>Understanding Pronto Email Services</h2>
+            <p>Pronto provides email services with webmail access and support for standard email protocols. Understanding the available access methods helps you choose the most convenient option for your needs.</p>
+            
+            <h3>Pronto Webmail Interface</h3>
+            <p>The Pronto webmail portal offers browser-based email access with features like email composition, contact management, calendar integration, and file storage. This method requires no additional software installation.</p>
+
+            <h3>Email Client Configuration</h3>
+            <p>Pronto supports standard email protocols (IMAP and POP3) for accessing emails through desktop and mobile email clients like Outlook, Thunderbird, Apple Mail, or mobile device email apps.</p>
+
+            <h3>Mobile Access Options</h3>
+            <p>Access Pronto email on smartphones and tablets through dedicated email apps, mobile browsers, or configured device email applications with proper server settings.</p>
+
+            <div class="highlight">
+                <h3>Login Credentials Information</h3>
+                <p>Your Pronto email login requires your full email address as username and your account password. These credentials are used across all access methods—webmail, desktop clients, and mobile applications.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Access Methods for Pronto Email</h2>
+            <p>Multiple options exist for accessing your Pronto email account:</p>
+
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>Webmail Access</h4>
+                    <p>Direct browser login through Pronto's webmail portal at webmail.pronto.net. This method provides full email functionality without software installation.</p>
+                </div>
+
+                <div class="method-card">
+                    <h4>Desktop Email Clients</h4>
+                    <p>Configure Outlook, Thunderbird, or Apple Mail using IMAP/POP3 settings. This allows email management through familiar desktop interfaces.</p>
+                </div>
+
+                <div class="method-card">
+                    <h4>Mobile Device Access</h4>
+                    <p>Set up Pronto email on iOS Mail, Android Email, or third-party mobile email apps for on-the-go access to your messages.</p>
+                </div>
+
+                <div class="method-card">
+                    <h4>Third-Party Applications</h4>
+                    <p>Use applications that support standard email protocols, though configuration may require manual server settings entry.</p>
                 </div>
             </div>
 
-            <div class="content-card">
-                <h2><i class="fas fa-key"></i> Secure Login Guide</h2>
-                <p>Pronto Email provides enterprise-grade security with user-friendly access across all your devices. Follow this comprehensive guide to securely access your email account in minutes.</p>
+            <table class="settings-table">
+                <thead>
+                    <tr>
+                        <th>Access Method</th>
+                        <th>Convenience</th>
+                        <th>Features</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Webmail</td>
+                        <td>High</td>
+                        <td>Full feature set</td>
+                        <td>Quick access, multiple computers</td>
+                    </tr>
+                    <tr>
+                        <td>Desktop Client</td>
+                        <td>Medium</td>
+                        <td>Offline access</td>
+                        <td>Power users, large attachments</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile App</td>
+                        <td>High</td>
+                        <td>Push notifications</td>
+                        <td>On-the-go access</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Pronto Email Server Settings</h2>
+            <p>Correct configuration requires these server settings for email client setup:</p>
+
+            <div class="login-example">
+                <strong>IMAP Settings:</strong><br>
+                • Server: mail.pronto.net<br>
+                • Port: 993 (SSL) or 143 (TLS)<br>
+                • Security: SSL/TLS<br>
+                • Username: Your full email address<br><br>
                 
-                <div class="info-box security-box">
-                    <div class="info-box-header">
-                        <i class="fas fa-shield-alt" style="color: var(--secondary);"></i>
-                        <h3>Security First</h3>
-                    </div>
-                    <p>Always verify you're on the official Pronto Email website (<strong>https://app-prontoemail.com</strong>) before entering your credentials. Look for the padlock icon in your browser's address bar to ensure a secure HTTPS connection.</p>
-                </div>
-
-                <h3><i class="fas fa-list-ol"></i> Step-by-Step Login Process</h3>
+                <strong>POP3 Settings:</strong><br>
+                • Server: mail.pronto.net<br>
+                • Port: 995 (SSL) or 110 (TLS)<br>
+                • Security: SSL/TLS<br>
+                • Username: Your full email address<br><br>
                 
-                <div class="steps-container">
-                    <div class="step-card">
-                        <div class="step-number">01</div>
-                        <div class="step-title">Navigate to Login Page</div>
-                        <p>Open your preferred browser and visit <strong>https://app-prontoemail.com</strong>. Bookmark this page for future access to avoid phishing sites.</p>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">02</div>
-                        <div class="step-title">Enter Your Credentials</div>
-                        <p>Type your registered email address and password exactly as created. Enable "Show Password" to verify accuracy if needed.</p>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">03</div>
-                        <div class="step-title">Complete Security Verification</div>
-                        <p>If two-factor authentication (2FA) is enabled, enter the code from your authenticator app or SMS. This adds an extra layer of protection.</p>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">04</div>
-                        <div class="step-title">Access Your Dashboard</div>
-                        <p>Once authenticated, you'll enter your Pronto Email dashboard where you can manage emails, settings, and account preferences.</p>
-                    </div>
-                </div>
-
-                <h3><i class="fas fa-exclamation-triangle"></i> Troubleshooting Common Issues</h3>
-                <ul>
-                    <li><strong>Forgotten Password:</strong> Click "Forgot Password" on the login page. Follow the reset instructions sent to your recovery email immediately.</li>
-                    <li><strong>Incorrect Credentials:</strong> Check Caps Lock, ensure correct email format (username@domain.com), and try typing password in a text editor first.</li>
-                    <li><strong>Browser Compatibility:</strong> Update your browser to the latest version, clear cache/cookies, or try a different browser like Chrome, Firefox, or Edge.</li>
-                    <li><strong>Account Lockout:</strong> Multiple failed attempts may temporarily lock your account. Wait 15-30 minutes or contact support for assistance.</li>
-                    <li><strong>2FA Not Working:</strong> Ensure your authentication device has the correct time/date. Use backup codes or alternative verification method.</li>
-                </ul>
-
-                <div class="info-box warning-box">
-                    <div class="info-box-header">
-                        <i class="fas fa-user-shield" style="color: var(--warning);"></i>
-                        <h3>Security Best Practices</h3>
-                    </div>
-                    <p>Always log out of your Pronto Email account when using shared or public computers. Never select "Remember Me" on devices you don't own. Regularly update your password and enable two-factor authentication for maximum security.</p>
-                </div>
-
-                <h3><i class="fas fa-mobile-alt"></i> Mobile Access Guide</h3>
-                <p>Access Pronto Email seamlessly on your mobile devices:</p>
-                <ol>
-                    <li><strong>Mobile Browser:</strong> Visit <strong>https://app-prontoemail.com</strong> in your phone's browser for full-featured access</li>
-                    <li><strong>Email App Setup:</strong> Configure your preferred email app using IMAP/POP3 settings (available in account settings)</li>
-                    <li><strong>Push Notifications:</strong> Enable browser notifications for instant email alerts on mobile</li>
-                    <li><strong>Biometric Login:</strong> Use fingerprint or face recognition on supported devices for quick, secure access</li>
-                </ol>
+                <strong>SMTP Settings:</strong><br>
+                • Server: mail.pronto.net<br>
+                • Port: 465 (SSL) or 587 (TLS)<br>
+                • Security: SSL/TLS<br>
+                • Authentication: Required
             </div>
 
-          
-        </article>
+            <div class="warning-box">
+                <h3>⚠️ Security Notice</h3>
+                <p>Always use SSL/TLS encryption when configuring Pronto email in clients. Unencrypted connections expose your login credentials and email content to potential interception. Port 993 for IMAP and 465/587 for SMTP with SSL/TLS are recommended configurations.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Webmail Login Process</h2>
+            <p>Accessing Pronto email through the webmail portal involves these steps:</p>
+
+            <ol class="step-list">
+                <li>
+                    <strong>Navigate to Pronto Webmail</strong><br>
+                    Open your web browser and go to the official Pronto webmail address: https://webmail.pronto.net. Bookmark this address to avoid phishing sites. Ensure you're using a secure HTTPS connection for login protection.
+                </li>
+                <li>
+                    <strong>Enter Login Credentials</strong><br>
+                    In the login form, enter your complete Pronto email address (username@pronto.net) and your account password. The email address field is typically case-insensitive, while password fields are case-sensitive.
+                </li>
+                <li>
+                    <strong>Security Verification</strong><br>
+                    If enabled on your account, complete additional security steps:
+                    <ul>
+                        <li>Two-factor authentication code entry</li>
+                        <li>CAPTCHA verification for suspicious activity</li>
+                        <li>Security question response</li>
+                        <li>Email verification for new devices</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Session Management</strong><br>
+                    Choose appropriate session settings:
+                    <ul>
+                        <li><strong>Remember Me:</strong> Maintains login for a specified period (use only on personal devices)</li>
+                        <li><strong>Public/Shared Computer:</strong> More restrictive session settings for security</li>
+                        <li><strong>Single Sign-On:</strong> If your organization uses integrated authentication</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Interface Navigation</strong><br>
+                    Upon successful login, you'll access the Pronto webmail dashboard:
+                    <ul>
+                        <li>Inbox view with email listing</li>
+                        <li>Compose button for new messages</li>
+                        <li>Folder navigation pane</li>
+                        <li>Settings/configuration options</li>
+                        <li>Search functionality for finding emails</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Account Settings Configuration</strong><br>
+                    After initial login, configure preferences:
+                    <ul>
+                        <li>Email signature setup</li>
+                        <li>Autoresponder configuration</li>
+                        <li>Filter and rule creation</li>
+                        <li>Contact management</li>
+                        <li>Security settings review</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Testing Email Functions</strong><br>
+                    Verify full functionality:
+                    <ul>
+                        <li>Send a test email to another account</li>
+                        <li>Check incoming email display</li>
+                        <li>Test attachment handling</li>
+                        <li>Verify folder creation and organization</li>
+                        <li>Confirm search functionality works</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Logout Procedure</strong><br>
+                    When finished, properly sign out:
+                    <ul>
+                        <li>Click your account name/profile picture</li>
+                        <li>Select "Logout" or "Sign Out"</li>
+                        <li>Close browser tabs for security</li>
+                        <li>Clear browser cache if using public computer</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="highlight">
+                <h3>Login Security Practices</h3>
+                <p>Always verify you're on the legitimate Pronto webmail site before entering credentials. Check for HTTPS encryption, correct domain name, and valid security certificates. Avoid accessing Pronto email through public Wi-Fi without VPN protection, and never save passwords on shared or public computers.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Email Client Configuration</h2>
+            <p>Setting up Pronto email in desktop or mobile email applications:</p>
+
+            <h3>Automatic Configuration</h3>
+            <p>Many email clients attempt automatic configuration when you enter your email address. For Pronto email, you may need to select "Manual Setup" or "Advanced Configuration" when automatic detection fails.</p>
+
+            <h3>Manual Configuration Steps</h3>
+            <p>When automatic setup doesn't work, manually enter server settings. Use IMAP for multi-device synchronization or POP3 for single-device access with local storage. SMTP settings are required for sending emails.</p>
+
+            <h3>Authentication Requirements</h3>
+            <p>Most clients require "Normal Password" authentication. Some may support OAuth or other authentication methods if configured by your Pronto administrator. Username must be your complete email address.</p>
+
+            <h3>SSL/TLS Configuration</h3>
+            <p>Proper encryption settings are crucial. Configure SSL/TLS on the recommended ports. Some clients may show certificate warnings—verify the certificate is issued to *.pronto.net before proceeding.</p>
+
+            <div class="warning-box">
+                <h3>Configuration Validation</h3>
+                <p>After entering settings, most email clients will test the connection. Ensure both incoming and outgoing server tests pass. If tests fail, double-check server addresses, ports, security settings, and authentication credentials. Temporary server issues may also cause test failures.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Troubleshooting Login Issues</h2>
+            <p>Resolve common Pronto email access problems:</p>
+
+            <div class="highlight">
+                <h3>1. Incorrect Password Errors</h3>
+                <p>When receiving "invalid password" messages, verify caps lock status, check for accidental spaces, attempt password reset through Pronto's recovery system, or try the password in webmail first to confirm it works.</p>
+            </div>
+
+            <h3>2. Account Locked or Disabled</h3>
+            <p>Multiple failed login attempts may temporarily lock your account. Wait 15-30 minutes before retrying, or contact Pronto support if the account remains inaccessible. Check for suspension notices in any alternate email addresses.</p>
+
+            <h3>3. Server Connection Problems</h3>
+            <p>If unable to connect to Pronto servers, verify internet connectivity, check firewall/antivirus settings aren't blocking email ports, test with different networks, or check Pronto service status for outages.</p>
+
+            <h3>4. SSL Certificate Errors</h3>
+            <p>Certificate warnings may appear if system date/time are incorrect, intermediate certificates are missing, or security software intercepts connections. Verify system clock accuracy and update root certificates.</p>
+
+            <h3>5. Configuration Mismatches</h3>
+            <p>When email client configuration fails, verify server addresses exactly match recommended settings, ports are correct, security method matches port selection, and authentication settings are properly enabled.</p>
+
+            <h3>6. Webmail Loading Issues</h3>
+            <p>If webmail doesn't load properly, clear browser cache and cookies, try different browsers, disable browser extensions temporarily, or check JavaScript is enabled in browser settings.</p>
+
+            <h3>7. Mobile Configuration Failures</h3>
+            <p>Mobile email apps may have different configuration requirements. Ensure you're using the correct server settings for mobile access, check device email app limitations, or try dedicated email applications.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <p>Protect your Pronto email account during access:</p>
+            
+            <h3>Password Security</h3>
+            <p>Use strong, unique passwords for your Pronto account. Avoid password reuse across services. Consider password manager usage for secure credential storage and generation.</p>
+
+            <h3>Two-Factor Authentication</h3>
+            <p>If Pronto offers two-factor authentication, enable it for additional security. This requires a second verification method beyond your password for account access.</p>
+
+            <h3>Session Management</h3>
+            <p>Always log out from shared or public computers. Avoid using "remember me" features on devices you don't exclusively control. Regularly review active sessions in account settings.</p>
+
+            <h3>Network Security</h3>
+            <p>Avoid accessing Pronto email over unsecured public Wi-Fi without VPN protection. Ensure home networks use WPA2/WPA3 encryption and changed default router passwords.</p>
+
+            <div class="highlight">
+                <h3>Phishing Awareness</h3>
+                <p>Be cautious of emails requesting you to "verify" your Pronto account credentials. Legitimate Pronto communications won't ask for your password via email. Always navigate directly to webmail.pronto.net rather than clicking email links for login.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Mobile Device Configuration</h2>
+            <p>Setting up Pronto email on smartphones and tablets:</p>
+
+            <h3>iOS Device Setup</h3>
+            <p>On iPhones and iPads, navigate to Settings → Mail → Accounts → Add Account. Select "Other" and enter Pronto email credentials and server settings manually for complete configuration.</p>
+
+            <h3>Android Device Setup</h3>
+            <p>Android email setup varies by device and version. Generally, open Email app, add new account, select "Manual Setup" or "Other," then enter Pronto server settings and credentials.</p>
+
+            <h3>Third-Party Mobile Apps</h3>
+            <p>Applications like Outlook Mobile, Spark, or Bluemail may offer enhanced features. Configuration typically involves entering email address, selecting "Advanced Setup," and providing server details.</p>
+
+            <h3>Push Notification Configuration</h3>
+            <p>Configure how and when you receive email notifications on mobile devices. Balance immediacy with battery life considerations based on your email importance and usage patterns.</p>
+
+            <h3>Mobile-Specific Security</h3>
+            <p>Enable device passcodes, biometric locks, and remote wipe capabilities. Consider separate app passwords if available, and regularly update mobile operating systems for security patches.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Advanced Access Methods</h2>
+            <p>Additional ways to access Pronto email functionality:</p>
+
+            <h3>Email Forwarding Configuration</h3>
+            <p>Set up automatic forwarding from your Pronto account to another email address while maintaining Pronto access for sending purposes.</p>
+
+            <h3>API and Programmatic Access</h3>
+            <p>For developers or advanced users, Pronto may offer API access for programmatic email management, though this requires technical expertise and proper authentication implementation.</p>
+
+            <h3>Command Line Access</h3>
+            <p>Advanced users can access Pronto email via command line tools using standard protocols, though this method is typically for technical administration rather than daily use.</p>
+
+            <h3>Integration with Other Services</h3>
+            <p>Some third-party services can integrate with Pronto email through standard protocols, enabling workflow automation or consolidated communication management.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Conclusion</h2>
+            <p>Accessing your Pronto email account is straightforward with proper credentials and configuration. Whether through webmail for convenience or email clients for advanced features, maintaining secure access practices ensures continuous email availability while protecting your communications.</p>
+            <div class="highlight">
+                <p><strong>Access Verification Tip:</strong> Periodically test alternative access methods to ensure you can reach your Pronto email when primary methods fail. Maintain backup configuration details and verify password recovery options remain current to prevent access interruptions during urgent situations.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Pronto Email</h4>
-                    <p>Secure, reliable email communication for personal and professional use. Access your messages anytime, anywhere.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://app-prontoemail.com/" target="_blank"><i class="fas fa-sign-in-alt"></i> Login Page</a></li>
-                        <li><a href="#"><i class="fas fa-question-circle"></i> Support Center</a></li>
-                        <li><a href="#"><i class="fas fa-file-alt"></i> Documentation</a></li>
-                        <li><a href="#"><i class="fas fa-mobile-alt"></i> Mobile Apps</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-shield-alt"></i> Security Guide</a></li>
-                        <li><a href="#"><i class="fas fa-sync-alt"></i> Password Reset</a></li>
-                        <li><a href="#"><i class="fas fa-cog"></i> Account Settings</a></li>
-                        <li><a href="#"><i class="fas fa-envelope"></i> Contact Support</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Pronto Email. All rights reserved. | Secure Email Platform | <a href="#" style="color: #9ca3af;">Privacy Policy</a> | <a href="#" style="color: #9ca3af;">Terms of Service</a></p>
-            </div>
+            <p>Pronto Email Login Guide. This is an informational article. We are not affiliated with Pronto.</p>
         </div>
     </footer>
 </body>
